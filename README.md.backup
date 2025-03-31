@@ -36,9 +36,9 @@ A full-stack restaurant review and rating platform that offers a clean experienc
 
 ---
 
-```
-```
 ## 📁 Project Structure
+
+```
 restaurant-rating-system/
 ├── android-client/           # Android app source code
 ├── admin-dashboard-vue/      # Vue.js admin panel
@@ -47,7 +47,7 @@ restaurant-rating-system/
 ├── screenshots/              # App images and UI captures
 └── README.md
 ```
-```
+
 ---
 
 ## 🚀 How to Run the Project
