@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.demo.dao.ReportDao">
+
+    <resultMap type="io.renren.modules.demo.entity.ReportEntity" id="reportMap">
+        <result property="id" column="id"/>
+        <result property="discussId" column="discuss_id"/>
+        <result property="reportUserId" column="report_user_id"/>
+        <result property="reportUserName" column="report_user_name"/>
+        <result property="reportType" column="report_type"/>
+        <result property="reportContent" column="report_content"/>
+        <result property="reportHandleType" column="report_handle_type"/>
+        <result property="reportHandle" column="report_handle"/>
+        <result property="audit" column="audit"/>
+        <result property="auditContent" column="audit_content"/>
+        <result property="createDate" column="create_date"/>
+        <result property="updateDate" column="update_date"/>
+        <result property="attr1" column="attr1"/>
+        <result property="attr2" column="attr2"/>
+        <result property="attr3" column="attr3"/>
+        <result property="attr4" column="attr4"/>
+    </resultMap>
+
+
+</mapper>

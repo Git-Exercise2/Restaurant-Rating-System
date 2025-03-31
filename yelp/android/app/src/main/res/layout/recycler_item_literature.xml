@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    android:layout_marginBottom="2dp">
+
+    <RelativeLayout
+        android:id="@+id/container_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/icon_pdf" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/iv_icon"
+            android:gravity="center_vertical"
+            android:text="这是一个标题"
+            android:textColor="#333333"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tv_import_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/iv_icon"
+            android:text="2024-11-01 11:00  |  位置：我的文献"
+            android:textColor="#666666"
+            android:textSize="12dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

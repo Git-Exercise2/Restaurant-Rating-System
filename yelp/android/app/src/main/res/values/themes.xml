@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Medical" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <declare-styleable name="StatusBarHeightView">
+        <attr name="use_type" format="integer">
+            <enum name="use_height" value="0" />
+            <enum name="use_padding_top" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

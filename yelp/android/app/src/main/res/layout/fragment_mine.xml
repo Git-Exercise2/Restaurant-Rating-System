@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container_1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/user_logo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_user_logo"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/user_logo"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:id="@+id/user_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#999999"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="10dp"
+        android:layout_below="@id/container_1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/container_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_about"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Favourite"
+                    android:textSize="18dp"
+                    android:textColor="@color/color_333333"
+                    android:layout_toRightOf="@id/iv1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp" />
+
+                <View
+                    android:id="@+id/divider_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_cdcdcd"
+                    android:layout_below="@id/tv_1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="40dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/container_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_feedback"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/tv_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Comments"
+                    android:textSize="18dp"
+                    android:textColor="@color/color_333333"
+                    android:layout_toRightOf="@id/iv3"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp" />
+
+                <View
+                    android:id="@+id/divider_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_cdcdcd"
+                    android:layout_below="@id/tv_3"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="40dp"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/bg_login_btn"
+        android:text="LOGOUT"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="150dp"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

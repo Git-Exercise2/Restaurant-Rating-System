@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.demo.maintenance.widget.StatusBarHeightView
+        android:id="@+id/StatusBarHeightView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:use_type="use_padding_top"
+        android:orientation="vertical">
+
+    </com.demo.maintenance.widget.StatusBarHeightView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textColor="#333333"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_login"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_account" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="#EEEEEE" />
+
+            <com.demo.maintenance.widget.ClearEditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:hint="Account"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:text="admin"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_login"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:padding="3dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_password" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="#EEEEEE" />
+
+            <com.demo.maintenance.widget.ClearEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="16dp"
+                android:text="admin"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/bg_login_btn"
+            android:text="LOGIN"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Register"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="13dp"
+            android:textColor="#666666" />
+
+    </LinearLayout>
+
+</RelativeLayout>

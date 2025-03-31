@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.demo.maintenance.widget.StatusBarHeightView
+        android:id="@+id/StatusBarHeightView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:use_type="use_padding_top"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_title_layout" />
+
+    </com.demo.maintenance.widget.StatusBarHeightView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_translate"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_translate_edit"
+            android:layout_margin="16dp"
+            android:padding="10dp"
+            android:hint="请输入"
+            android:textColorHint="#666666"
+            android:gravity="left|top"
+            android:textSize="18dp"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:id="@+id/et_translate_result"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_translate_edit"
+            android:layout_margin="16dp"
+            android:padding="10dp"
+            android:text="结果"
+            android:gravity="left|top"
+            android:textSize="18dp"
+            android:textColor="#666666"/>
+
+        <Button
+            android:id="@+id/btn_start_translate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="翻译"
+            android:background="@drawable/bg_login_btn"
+            android:textColor="@color/white"
+            android:layout_gravity="right"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="6dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
