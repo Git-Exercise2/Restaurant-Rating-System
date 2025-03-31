@@ -36,9 +36,9 @@ A full-stack restaurant review and rating platform that offers a clean experienc
 
 ---
 
-## 📁 Project Structure
-
 ```
+```
+## 📁 Project Structure
 restaurant-rating-system/
 ├── android-client/           # Android app source code
 ├── admin-dashboard-vue/      # Vue.js admin panel
@@ -47,12 +47,16 @@ restaurant-rating-system/
 ├── screenshots/              # App images and UI captures
 └── README.md
 ```
-
+```
 ---
 
 ## 🚀 How to Run the Project
 
 ### ✅ 1. Start MySQL
+- 1. Start the programs Android studio, IntelliJ IDEA Ultimate, Navicat in order
+- Open admin-server and admin-ui in the Yelp folder in IntelliJ and run them respectively
+- Open android in the Yelp folder in Android studio and change the IP address in String before running
+- String IP = "http://192.168.56.1:8080/renren-admin";
 
 - Ensure MySQL server is running
 - Default port: `3306`

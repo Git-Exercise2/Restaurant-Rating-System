@@ -53,6 +53,10 @@ restaurant-rating-system/
 ## 🚀 How to Run the Project
 
 ### ✅ 1. Start MySQL
+- 1. Start the programs Android studio, IntelliJ IDEA Ultimate, Navicat in order
+- Open admin-server and admin-ui in the Yelp folder in IntelliJ and run them respectively
+- Open android in the Yelp folder in Android studio and change the IP address in String before running
+- String IP = "http://192.168.56.1:8080/renren-admin";
 
 - Ensure MySQL server is running
 - Default port: `3306`
@@ -97,10 +101,12 @@ npm run dev
    ```bash
    ipconfig
    ```
-3. Find your **IPv4 address**, e.g., `192.168.0.xxx`
+3. Find your **IPv4 address**, e.g., `http://192.168.56.1:8080/renren-admin`
 4. Replace `localhost` in `HttpManager.java` with that IP
 
 > Android physical devices **cannot connect to localhost**, so IP is required.
+
+- Open the android in the Yelp folder in Android studio and change the IP address in String: String IP = "http://192.168.56.1:8080/renren-admin"; then run
 
 ---
 
