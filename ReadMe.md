@@ -1,62 +1,164 @@
+
+```markdown
 # 🍽️ Restaurant Rating System
 
-A full-stack restaurant review platform designed to deliver a clean, intuitive experience for diners and powerful content management tools for administrators.
-
-This system includes:
-- A native Android app for end users
-- A responsive web-based admin dashboard
-- A secure, scalable backend built with Spring Boot and MySQL
+A full-stack restaurant review and rating platform that offers a clean experience for diners and powerful moderation tools for administrators. The project features a native Android app for users, a Vue-based admin dashboard, and a Spring Boot + MySQL backend.
 
 ---
 
-## 📲 Mobile Application (Android)
+## 📲 Features Overview
 
-Developed with native Java in Android Studio, the mobile app provides restaurant seekers with a simple and user-friendly interface.
+### 🧑‍🍳 User-Side Mobile App (Android)
+- User registration and login
+- Browse nearby restaurants
+- Search by keyword
+- View details, images, ratings, and categories
+- Post star ratings and text reviews
+- Reply to comments
+- Report inappropriate content
+- Manage favorite restaurants
 
-### 🌟 Features
-- 🔐 User registration and login
-- 🍴 Browse nearby restaurants with real-time search
-- ⭐ Post ratings and textual reviews
-- 💬 Reply to comments
-- 🚩 Report inappropriate content
-- ❤️ Add restaurants to favorites
+### 🛠️ Admin Web Panel (Vue.js)
+- Admin login with role-based access
+- View and manage restaurant entries
+- Moderate user reviews and handle reports
+- Ban users or delete inappropriate comments
+- Import data from Yelp Fusion API
+- Export restaurant and review data to Excel
 
-> Data is dynamically loaded using JSON from the backend, with support for smooth image rendering (Glide) and secure request handling.
-
----
-
-## 🖥️ Admin Dashboard (Vue.js)
-
-The web-based admin panel, built using Vue 3 + Element Plus, enables administrators to manage platform content and moderate user interactions.
-
-### 🛠️ Capabilities
-- 📋 Manage restaurant listings (manual or via Yelp API)
-- 👁️ View and moderate user reviews and reports
-- ❌ Handle reports by deleting content or banning users
-- 📤 Export data to Excel
-- 🛡️ Role-based access (admin only)
-
----
-
-## ⚙️ Backend API (Spring Boot + MyBatis)
-
-The backend provides a RESTful API, ensuring high-performance communication between frontends and the MySQL database.
-
-### 🔐 Core Features
-- ✅ JWT-based token authentication
-- 🔐 BCrypt password hashing
-- 🛡️ CSRF protection
-- 🎯 DTO-based API responses
-- 🔗 Yelp Fusion API integration with deduplication logic
+### ⚙️ Backend API (Spring Boot)
+- Secure RESTful API using Spring Boot and MyBatis
+- MySQL for relational data storage
+- CSRF protection
+- JWT-based authentication
+- BCrypt password hashing
+- Integration with Yelp API (with duplicate check)
 
 ---
 
-## 🧰 Tech Stack Overview
+## 📁 Project Structure
+
+```
+restaurant-rating-system/
+├── android-client/           # Android app source code
+├── admin-dashboard-vue/      # Vue.js admin panel
+├── backend-springboot/       # Spring Boot backend
+├── database/                 # SQL schema and test data
+├── screenshots/              # App images and UI captures
+└── README.md
+```
+
+---
+
+## 🚀 How to Run the Project
+
+### ✅ 1. Start MySQL
+
+- Ensure MySQL server is running
+- Default port: `3306`
+- Username: `root`
+- Password: `root`
+
+You can use Navicat or any MySQL GUI tool to connect:
+
+![Navicat Connection Example](./image.png)
+
+---
+
+### ✅ 2. Run Backend Server
+
+```bash
+cd backend-springboot
+mvn clean install
+java -jar target/restaurant-api.jar
+```
+
+---
+
+### ✅ 3. Launch Admin Dashboard
+
+```bash
+cd admin-dashboard-vue
+npm install
+npm run dev
+```
+
+---
+
+### ✅ 4. Start Android App
+
+- Open `android-client/` in Android Studio
+- Run on emulator or real Android device (Android 6.0+)
+
+📌 **Set proper IP address in Android app:**
+
+1. Press `Win + R`, type `cmd`
+2. In terminal:  
+   ```bash
+   ipconfig
+   ```
+3. Find your **IPv4 address**, e.g., `192.168.0.xxx`
+4. Replace `localhost` in `HttpManager.java` with that IP
+
+> Android physical devices **cannot connect to localhost**, so IP is required.
+
+---
+
+## 🔐 Default Login Credentials
+
+| Role                | Username | Password |
+|---------------------|----------|----------|
+| 🛡️ Admin            | admin    | admin    |
+| 🍽️ Restaurant Admin | xxxxx    | 123456   |
+| 👤 User             | (register) | (register) |
+| 🗄️ MySQL Root       | root     | root     |
+
+---
+
+## 🧰 Tech Stack
 
 | Layer         | Technology                             |
 |---------------|-----------------------------------------|
-| Mobile App    | Android (Java), Retrofit, Glide         |
+| Android App   | Java, Retrofit, Glide                   |
 | Web Panel     | Vue 3, Element Plus, Axios              |
-| Backend       | Spring Boot, MyBatis, JWT, CSRF, BCrypt |
+| Backend       | Spring Boot, MyBatis, JWT, BCrypt       |
 | Database      | MySQL                                   |
-| Integration   | [Yelp Fusion API](https://www.yelp.com/developers) |
+| External API  | [Yelp Fusion API](https://www.yelp.com/developers) |
+
+---
+
+## 💡 Future Enhancements
+
+- 🤖 AI/NLP to auto-moderate offensive reviews
+- 🧠 Personalized recommendations
+- 🗣️ Owner replies to user feedback
+- 🔔 Real-time notifications
+- 🌍 Multi-language support
+
+---
+
+## 👨‍💻 Contributors
+
+| Name              | Role                                |
+|-------------------|-------------------------------------|
+| Haozheng Wang     | Integration, Testing, Documentation |
+| Ziqi Zhao         | Backend Development, Yelp API       |
+| Jietang Hou       | Admin Dashboard (Vue.js)            |
+| Roy (Zijie) Zhang | Android UI and Feature Development  |
+
+---
+
+## 📜 License & Data Usage
+
+This project was developed for academic and educational purposes only.  
+No real user data is collected or stored.  
+Yelp data is accessed via the [Yelp Fusion API](https://www.yelp.com/developers) and used for non-commercial testing only.
+
+---
+
+## 🔗 GitHub Repository
+
+> Feel free to fork, star, or contribute:
+
+📎 [https://github.com/Git-Exercise2/Restaurant-Rating-System](https://github.com/Git-Exercise2/Restaurant-Rating-System)
+```
