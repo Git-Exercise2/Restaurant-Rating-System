@@ -63,9 +63,6 @@ restaurant-rating-system/
 - Username: `root`
 - Password: `root`
 
-You can use Navicat or any MySQL GUI tool to connect:
-
-![Navicat Connection Example](./image.png)
 
 ---
 
