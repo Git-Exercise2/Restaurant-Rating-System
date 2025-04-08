@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.demo.dao.DiscussDao">
+
+    <resultMap type="io.renren.modules.demo.entity.DiscussEntity" id="discussMap">
+        <result property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="parentId" column="parent_id"/>
+        <result property="parentUserId" column="parent_user_id"/>
+        <result property="parentUserName" column="parent_user_name"/>
+        <result property="restaurantId" column="restaurant_id"/>
+        <result property="restaurantName" column="restaurant_name"/>
+        <result property="content" column="content"/>
+        <result property="createDate" column="create_date"/>
+        <result property="isDelete" column="is_delete"/>
+        <result property="attr1" column="attr1"/>
+        <result property="attr2" column="attr2"/>
+        <result property="attr3" column="attr3"/>
+        <result property="attr4" column="attr4"/>
+        <result property="attr5" column="attr5"/>
+    </resultMap>
+
+
+</mapper>

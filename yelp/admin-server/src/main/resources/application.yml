@@ -1,0 +1,79 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    threads:
+      max: 1000
+      min-spare: 30
+  port: 8080
+  servlet:
+    context-path: /renren-admin
+    session:
+      cookie:
+        http-only: true
+
+knife4j:
+  enable: true
+  basic:
+    enable: false
+    username: admin
+    password: admin
+  setting:
+    enableFooter: false
+
+spring:
+  # envirment dev|test|prod
+  profiles:
+    active: prod
+  messages:
+    encoding: UTF-8
+    basename: i18n/messages
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+
+  data:
+    redis:
+      database: 0
+      host: 192.168.10.10
+      port: 6379
+      password:    # Password (default is empty)
+      timeout: 6000ms  # Connection timeout duration (milliseconds)
+      lettuce:
+        pool:
+          max-active: 1000  # Connection pool Maximum number of connections (use negative values to indicate no limit)
+          max-wait: -1ms      # Maximum connection pool blocking latency (use negative values to indicate no limit)
+          max-idle: 10      # The maximum free connection in the connection pool
+          min-idle: 5       # The minimum free connection in the connection pool
+
+# Whether to enable redis cache true Enable false Disable
+renren:
+  redis:
+    open: false
+
+#mybatis
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  # Physical scanning, multiple packages separated by commas or semicolons
+  typeAliasesPackage: io.renren.modules.*.entity
+  global-config:
+    #Database related configuration
+    db-config:
+      #Primary key type
+      id-type: ASSIGN_ID
+    banner: false
+  #Native configuration
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+    jdbc-type-for-null: 'null'
+  configuration-properties:
+    prefix:
+    blobType: BLOB
+    boolValue: TRUE
